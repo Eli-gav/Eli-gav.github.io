@@ -1,0 +1,326 @@
+
+    /***** h1's paragraphs *****/
+/* Body */
+body {
+    margin: 0;
+    padding:0; 
+    
+}
+
+h1 {
+    text-align: center;
+    font-family: Quicksand, bold;
+    color: purple;
+    text-shadow: 4px 4px 3px rgb(255, 255, 255);
+    letter-spacing: 4px;
+    border: solid purple 3px;
+    border-style:double;
+    font-size: 60px;
+}
+
+
+h2 {
+    text-align: center;
+    color:rgb(236, 86, 188);
+    font-family:Quicksand;
+    border-bottom: solid white 3px;
+    font-size:25px;
+}
+
+
+/* Paragraph elements */
+p {
+    font-family: Quicksand, bold;
+    text-align: justify; 
+    letter-spacing: 2px; 
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.p-1 {
+    border-bottom: solid white 5px;
+    padding-left:40px;
+}
+
+.center{
+    text-align: center;
+}
+
+.mytitle {
+    margin:0;
+}
+
+.p-about {
+    padding-top:-30px;
+    font-family: Quicksand;
+    font-weight: 400;
+    letter-spacing: 3px;
+    padding-left:190px;
+}
+
+
+/* ALL HOVERS FOR P AND TITLES*/
+
+h1:hover {
+    color:#de80ba;
+}
+
+
+h2:hover {
+    color:#590274;
+
+}
+
+
+.center:hover {
+    transition: transform 2s; 
+    transform: scale(1.1); 
+}
+
+/* Anchor elements */
+a {
+    color: blue; 
+}
+
+
+/* Image elements************************************* */
+img {
+    border-radius: 20px; 
+    max-width: 100%; 
+    height: 150px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top:50px
+}
+
+.comp {
+    border-radius:30%;
+    height: 190px;
+    position:relative;
+    top:-250px;
+    left:-350px;
+    
+}
+ 
+
+
+.top-img {
+    background-image: url('../images/try-10.png');
+    height: 600px;
+    background-repeat: no-repeat;
+    z-index:-1;
+    background-position: center;
+    background-size: cover;
+     
+  
+}
+
+.top-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+.mid-img {
+    background-image: url('../images/purple-lines.webp');
+    height:500px;
+    background-repeat: no-repeat;
+    z-index:-1;
+    background-position: center;
+    background-size:cover;
+}
+
+.three-img {
+    background-image: url('../images/pink-bubbles.webp');
+    height:500px;
+    background-image: no-repeat;
+    z-index:-1;
+    background-position: center;
+    background-size:cover;
+}
+
+.bottom-img {
+    background-image: url('../images/purple-bubbles.jpg');
+    background-repeat: no-repeat;
+    z-index:-1;
+    background-position: center;
+    background-size:cover;
+}
+
+
+
+/* Image element hover effects */
+img:hover {
+    transition: transform 1s; 
+	transform: scale(1.1); 
+}
+        
+
+.comp:hover {
+    transition: transform 1s; 
+	transform: scale(1.1); 
+    filter:contrast(2);
+    
+}
+
+.contrast:hover {
+    filter: invert(100%);  
+}
+
+/* Styling for footer element */
+footer {
+    padding: 2%; 
+    background-color: rgb(244, 196, 249);
+    margin-top: 2px;
+    margin-bottom:2px;
+    
+}
+
+.bottom p {
+    margin:0;
+    padding:0;
+    
+}
+
+
+/***** NAVBAR  *****/
+
+
+.navbar {
+    overflow: hidden; 
+    background-color: rgb(56, 6, 49); 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1; 
+    -webkit-animation: moveNav 5s; 
+    animation: moveNav 5s; 
+}
+
+
+/* Navbar links */
+.navbar a {
+    float: left;
+    display: block; 
+    color: rgb(241, 224, 237); 
+    padding: 14px 16px; 
+    text-decoration: none;
+    font-family: Verdana, Helvetica; 
+    font-size: 20px; 
+    text-align: center; 
+    position: relative; 
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s; 
+}
+
+
+/* NAVBAR HOVER */
+.navbar a:hover {
+    background-color: #de80ba; 
+    color: rgb(245, 10, 131); 
+    font-weight: bold; 
+}
+
+/* Navbar home button */
+.navbar a.active { 
+    background-color: rgb(31, 1, 40);
+}
+
+
+
+/*TABLE STYLING***/
+* { 
+    box-sizing: border-box; 
+} 
+
+.Column_1 {
+    float: left;
+    width: 50%; 
+    padding: 10px;
+    padding-top: 3%; 
+    height: 300px; 
+    background-color: #f2f2f2; 
+}
+
+
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #ffffff;
+}
+
+
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+
+.Row:after {
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+
+/***** CONTACT FORM STYLING *****/
+/* ALL TEXT INPUT IN CONTACT ********/
+input[type=text] {
+    width: 100%; 
+    padding: 12px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; 
+    font-family:Poppins;
+}
+
+/* HOVER EFFECT INPUT BOXES****/
+input[type=text]:hover {
+    box-shadow: 0 0 5px #40013e inset; 
+}
+
+/* SUBMIT BUTTON *******/
+input[type=submit] {
+    background-color: rgb(35, 2, 46); 
+    color: rgb(241, 219, 239); 
+    font-weight: bold; 
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-family: Montserrat;
+}
+
+/* BUTTON HOVER SUBMIT***********/
+input[type=submit]:hover {
+    background-color: rgb(67, 4, 70); 
+    color: rgb(231, 164, 229); 
+    transform: scale(1.1); 
+    transition: transform 0.5s; 
+}
+
+/* INSIDE FORM*****************/
+form {
+    border-radius: 8px; 
+    background-color: #590274; 
+    padding: 10px;
+    font-family: Quicksand, bold;
+}
+
+
+
