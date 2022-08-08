@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <link rel="stylesheet" href="./css/final_css.css">
+        <script src="./js/one_page_.js" defer></script>
     </head>
     
     
@@ -54,45 +55,119 @@
                             <p>Please reach out or <a href="#contact">email me</a> if your interested in working with me.<br></p>
                         </div>
                         <div>
-                            <img src="./images/computer-code.gif" alt="">
+                            <img class="code" src="./images/computer-code.gif" alt="">
                         </div>
                 </div>
         </div>
 
-        <!--GITHUB--------->
-        <div id="github">
+
+
+        <!---IMAGE LIGHTBOX-->
+
+    <div class="bl">
+        <h2 style="text-align: center">Click me!</h2>
+
+        <div class="row">
+        <div class="column">
+            <img src="./images/computer_1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="./images/computer-code.gif" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="./images/github.gif" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="./images/phone.gif" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        </div>
+
+        <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/computer_1.png" style="width:25%">
+            </div>
+
+            <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/computer-code.gif" style="width:25%">
+            </div>
+
+            <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/github.gif" style="width:25%">
+            </div>
             
-            <div class="three-img">
-                    <h1 class="mytitle">GitHub</h1>
-                    <p class="center">All my coding projects I’ve worked on during my courses at <a href="https://www.learncodinganywhere.com">The Tech Academy</a> are stored here:</p>
-                        <div class="center">
-                            <a href="https://github.com/Eli-gav" target="_blank">My Github</a><br>
-                            <a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a>
-                        </div>
-                    <img class="contrast" src="./images/github.gif" alt="github logo">
+            <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/phone.gif" style="width:25%">
             </div>
-        </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-        <!--CONTACT------------>
-        <div id="contact">
-            <!--info-->
-            <div class="bottom-img">
-                <h1 class="mytitle">Contact</h1>
-                <div>
-                    <img class="contrast" src="./images/phone.gif" alt="phone">
-                </div>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter a name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Any other input for me">
-                        <input type="submit" value="SUBMIT">
-                </form>
+            <div class="caption-container">
+            <p id="caption">Github</p>
+            </div>
+
+
+            <div class="column">
+            <img class="demo cursor" src="./images/computer_1.png" style="width:100%" onclick="currentSlide(1)" alt="">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="./images/computer-code.gif" style="width:100%" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="./images/github.gif" style="width:100%" onclick="currentSlide(3)" alt="">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="./images/phone.gif" style="width:100%" onclick="currentSlide(4)" alt="">
             </div>
         </div>
+        </div>
+    </div>
+
+        <!--END LIGHTBOX-->
+
+                
+
+                <!--GITHUB--------->
+                <div id="github">
+                    
+                    <div class="three-img">
+                            <h1 class="mytitle">GitHub</h1>
+                            <p class="center">All my coding projects I’ve worked on during my courses at <a href="https://www.learncodinganywhere.com">The Tech Academy</a> are stored here:</p>
+                                <div class="center">
+                                    <a href="https://github.com/Eli-gav" target="_blank">My Github</a><br>
+                                    <a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a>
+                                </div>
+                            <img class="contrast" src="./images/github.gif" alt="github logo">
+                    </div>
+                </div>
+
+                <!--CONTACT------------>
+                <div id="contact">
+                    <!--info-->
+                    <div class="bottom-img">
+                        <h1 class="mytitle">Contact</h1>
+                        <div>
+                            <img class="contrast" src="./images/phone.gif" alt="phone">
+                        </div>
+                        <!--This specifies where and how to send the form data; we are leaving it blank-->
+                        <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                            <label>Name:</label>
+                                <input type="text" placeholder="Please enter a name here">
+                            <label>Email:</label>
+                                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                            <label>Message:</label>
+                                <input type="text" id="Message" name="Message" placeholder="Any other input for me">
+                                <input type="submit" value="SUBMIT">
+                        </form>
+                    </div>
+                </div>
                     
 
 
