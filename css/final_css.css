@@ -8,15 +8,25 @@ body {
 }
 
 h1 {
+    margin:0;
+    position: relative;
+    animation-name: textmove;
+    animation-duration: 4s;  
+    animation-fill-mode: both;
     text-align: center;
     font-family: Quicksand, bold;
     color: purple;
     text-shadow: 4px 4px 3px rgb(255, 255, 255);
     letter-spacing: 4px;
-    border: solid purple 3px;
-    border-style:double;
     font-size: 60px;
 }
+
+@keyframes textmove {
+    from {left: 300px; }
+    to {left: 0px;}
+  }
+
+
 
 
 h2 {
@@ -28,6 +38,7 @@ h2 {
 }
 
 
+
 /* Paragraph elements */
 p {
     font-family: Quicksand, bold;
@@ -35,20 +46,56 @@ p {
     letter-spacing: 2px; 
     font-size: 15px;
     font-weight: 300;
+    animation-name: example;
+    animation-duration: 8s;
 }
+
+@keyframes example {
+    0% {color: rgb(255, 255, 255);}
+  25%  {color: rgb(41, 0, 94);}
+  50%  {color: rgb(255, 0, 179);}
+  100% {color: rgb(255, 255, 255);}
+  }
 
 .p-1 {
     border-bottom: solid white 5px;
     padding-left:40px;
+   
 }
+
+
+.whitet{
+    color:white;
+}
+.test{
+  width: 100px;
+  height: 5px;
+  position: relative;
+  animation: myline 6s infinite;
+    
+}
+
+@keyframes myline {
+    0%   {background: rgb(169, 8, 238); left: 0px; }
+    25%  {background: rgb(255, 0, 136); left: 225px; }
+    75%  {background: rgb(255, 255, 255); left: 0px; } 
+    100% {background: rgb(217, 0, 255); left: 0px; }
+  }
+
 
 .center{
     text-align: center;
+    font-size:15px;
 }
 
 .mytitle {
     margin:0;
+    border: solid purple 3px;
+    border-style:double;
+   
 }
+
+
 
 .p-about {
     padding-top:-30px;
@@ -57,6 +104,7 @@ p {
     letter-spacing: 3px;
     padding-left:190px;
 }
+
 
 
 /* ALL HOVERS FOR P AND TITLES*/
@@ -76,7 +124,12 @@ h2:hover {
     transition: transform 2s; 
     transform: scale(1.1); 
 }
-
+.change:hover {
+    color:#fd086e;
+    font-size: 20px;
+    
+    
+}
 /* Anchor elements */
 a {
     color: blue; 
@@ -91,7 +144,8 @@ img {
     display: block; 
     margin-left: auto; 
     margin-right: auto;
-    margin-top:50px
+    margin-top:50px;
+    border-radius: 9px;
 }
 
 .comp {
@@ -104,15 +158,59 @@ img {
     
 }
 
+
+
+
 .code {
     border-radius: 20px;
+    animation: grow 5s infinite;
    
+}
+@keyframes grow {
+    20% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+  }
+
+.code:hover {
+    opacity: 0.7;
+
+}
+
+
+.git {
+    border-radius: 20px;
+}
+
+.git:hover{
+    filter: invert(100%); 
+}
+
+.gittest {
+    height:80px;
+    width: 100px;
+    border-radius: 9px;
+    position: relative;
+    animation: gitt 8s infinite;
+}
+@keyframes gitt {
+    0%   { left: -150px; }
+    25%  { left: 180px; }
+    75%  { left: 380px;  }
+    100% { left: -180px; }
 }
 
 .contrast{
     border-radius: 20px;
+    margin-bottom: 20px;
+    animation: grow 5s infinite;
+  
 }
- 
+
+@keyframes grow {
+    40% { transform: scale(1.5); }
+    60% { transform: scale(1); }
+  }
+
 
 
 .top-img {
@@ -179,8 +277,7 @@ img {
 footer {
     padding: 2%; 
     background-color: rgb(244, 196, 249);
-    margin-top: 2px;
-    margin-bottom:2px;
+    margin: 0;
     
 }
 
@@ -196,13 +293,21 @@ footer {
 
 .navbar {
     overflow: hidden; 
-    background-color: rgb(56, 6, 49); 
+    background-color: transparent; 
     position: fixed; 
     top: 0; 
     width: 100%; 
+    font-family: cursive;
     z-index: 1; 
     -webkit-animation: moveNav 5s; 
-    animation: moveNav 5s; 
+    animation: moveNav 3s; 
+}
+  
+
+
+@keyframes moveNav {
+    from {left: 100vw;} 
+    to { left: 0vw;} 
 }
 
 
@@ -224,14 +329,15 @@ footer {
 
 /* NAVBAR HOVER */
 .navbar a:hover {
-    background-color: #de80ba; 
+    background-color: #de80baad; 
     color: rgb(245, 10, 131); 
     font-weight: bold; 
 }
 
 /* Navbar home button */
 .navbar a.active { 
-    background-color: rgb(31, 1, 40);
+    background-color: rgba(196, 87, 161, 0.503);
+    border-radius: 3px;
 }
 
 
@@ -275,55 +381,6 @@ footer {
 }
 
 
-/***** CONTACT FORM STYLING *****/
-/* ALL TEXT INPUT IN CONTACT ********/
-input[type=text] {
-    width: 100%; 
-    padding: 12px; 
-    border: 3px solid rgb(0, 0, 0); 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical; 
-    font-family:Poppins;
-}
-
-/* HOVER EFFECT INPUT BOXES****/
-input[type=text]:hover {
-    box-shadow: 0 0 5px #40013e inset; 
-}
-
-/* SUBMIT BUTTON *******/
-input[type=submit] {
-    background-color: rgb(35, 2, 46); 
-    color: rgb(241, 219, 239); 
-    font-weight: bold; 
-    padding: 12px 20px; 
-    border: none; 
-    border-radius: 6px; 
-    cursor: pointer; 
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto;
-    font-family: Montserrat;
-}
-
-/* BUTTON HOVER SUBMIT***********/
-input[type=submit]:hover {
-    background-color: rgb(67, 4, 70); 
-    color: rgb(231, 164, 229); 
-    transform: scale(1.1); 
-    transition: transform 0.5s; 
-}
-
-/* INSIDE FORM*****************/
-form {
-    border-radius: 8px; 
-    background-color: #590274; 
-    padding: 10px;
-    font-family: Quicksand, bold;
-}
 
 
 /*LIGHTBOX SECTION*/
@@ -353,13 +410,13 @@ form {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.53);
   }
   
   /* Modal Content */
   .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: #0700005c;
     margin: auto;
     padding: 0;
     width: 90%;
@@ -385,6 +442,8 @@ form {
   
   .mySlides {
     display: none;
+    border-radius: 9px;
+    background-color: white;
   }
   
   .cursor {
@@ -417,12 +476,12 @@ form {
   
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(143, 132, 132);
   }
   
   /* Number text (1/4 etc) */
   .numbertext {
-    color: #000000;
+    color: #ffffff;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -434,11 +493,12 @@ form {
     text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 2px 16px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
   
   .demo {
     opacity: 0.6;
+    
    
   }
   
@@ -452,11 +512,13 @@ form {
   }
   
   .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.704), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.916), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.5;
   }
 
   .bl {
-    background-color: #590274;
+    background-image: url('../images/heart.gif');
+    background-color: #5f077a;
     height:300px;
     background-repeat: no-repeat;
     z-index:-1;
@@ -465,3 +527,197 @@ form {
    
     margin-top: -20px;
   }
+
+  
+  
+  .popup {
+    margin-left:800px;
+    margin-top:-400px;
+    text-decoration: underline;
+    color:#40013e;
+    font-size: 17px;
+    background-color: rgba(255, 208, 0, 0.434);
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgb(80, 40, 97);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  
+/***** Contact Form Styling *****/
+
+.fade-in-text {
+
+    animation: fadeIn 5s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.Pop_Up_Button {
+    position: fixed; 
+    bottom: 1.75vw; 
+    right: 1.75vw; 
+    width: 25vw; 
+    background-color: rgba(105, 8, 161, 0.458); 
+    color: black; 
+    border: solid black; 
+    cursor: pointer;
+    animation: flicker 1.5s infinite alternate; 
+}
+:root {
+   
+    font-size: 10px;   
+    
+    
+    --neon-text-color: rgb(242, 255, 0);
+    --neon-border-color: rgb(247, 0, 255);
+  }
+
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+
+
+
+
+.form-popup {
+    z-index: 8; 
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
+    
+}
+
+
+.form-container {
+    max-width: 35vw; 
+    padding: 1vw; 
+    background-color: rgba(45, 0, 113, 0.758); 
+    border-radius: 9px;
+}
+
+
+.form-container input[type=text] {
+    width: 100%; 
+    padding: .93vw; 
+    margin: .6vw 0 .6vw 0; 
+    border: none; 
+    background: rgb(241, 239, 239); 
+    font-size: 1vw; 
+}
+
+
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw; 
+    font-size: 1.5vw; 
+    font-weight: bold; 
+    padding: 1.5vw; 
+    cursor: pointer; 
+    width: 100%; 
+    height: auto; 
+}
+
+
+button:hover, .form-container .btn:hover {
+    color: white; 
+    background-color: black; 
+    transition-duration: 1s; 
+    -webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+    border-color: rgb(255, 255, 255); 
+}
+
+
+.form-container .btn {
+    background-color: white; 
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh; 
+}
+
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+
+.form-container .cancel:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
+
+  

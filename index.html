@@ -33,14 +33,19 @@
         <!--ENTRY-->
             <div  id="home" class="top-img">
                 <div class="top-text">
+                    
                     <h1 class="mytitle">Elise Snow</h1>
                     <div>
                             <h2>Portfolio</h2>
                                 <h2>Software Development</h2>
                                 <p class="p-1">To build and to fix is my goal.</p>
-                    </div>
-                                <img class="comp" src="./images/computer_1.png" alt="">
-                
+                                <div class="test"></div>
+                            </div>   
+                            
+                                    <img class="comp" src="./images/computer_1.png" alt="">
+                               
+                                
+                    
                 </div>
             </div>
     
@@ -48,15 +53,22 @@
         <!--ABOUT SECTION-->
         <div id="aboutme">
                 <div class="mid-img">
-                    <h1 class="mytitle">About</h1>
+                    <h1>About</h1>
                         <div class="p-about">
                             <p>I am a beginner software developer who is taking courses at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a><br></p>
-                            <p>The skills that I’ve learned over the duration my course are HTML, CSS, JavaScript, C#, SQL.<br></p>
+                            <p>The skills that I’ve learned over the duration my course are 
+                                <span class="change">HTML, </span><span class="change">CSS, </span>
+                                <span class="change">JavaScript, </span><span class="change">C#, </span>
+                                <span class="change">SQL.</span><br></p>
                             <p>Please reach out or <a href="#contact">email me</a> if your interested in working with me.<br></p>
                         </div>
+    
                         <div>
                             <img class="code" src="./images/computer-code.gif" alt="">
                         </div>
+                        <div class="popup" onclick="myFunction()">Course Details
+                            <span class="popuptext" id="myPopup">Graduate from the Tech Academy Full Stack Developer Course</span>
+                          </div>
                 </div>
         </div>
 
@@ -65,7 +77,6 @@
         <!---IMAGE LIGHTBOX-->
 
     <div class="bl">
-        <h2 style="text-align: center">Click me!</h2>
 
         <div class="row">
         <div class="column">
@@ -138,36 +149,43 @@
                 <div id="github">
                     
                     <div class="three-img">
-                            <h1 class="mytitle">GitHub</h1>
+                            <h1>GitHub</h1>
                             <p class="center">All my coding projects I’ve worked on during my courses at <a href="https://www.learncodinganywhere.com">The Tech Academy</a> are stored here:</p>
                                 <div class="center">
                                     <a href="https://github.com/Eli-gav" target="_blank">My Github</a><br>
                                     <a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a>
                                 </div>
-                            <img class="contrast" src="./images/github.gif" alt="github logo">
+                                
+                            <img class="git" src="./images/github.gif" alt="github logo">
+                            <div>
+                            <img class="gittest" src="./images/move.gif" alt="">
+                            </div>
                     </div>
                 </div>
 
                 <!--CONTACT------------>
-                <div id="contact">
-                    <!--info-->
-                    <div class="bottom-img">
-                        <h1 class="mytitle">Contact</h1>
-                        <div>
-                            <img class="contrast" src="./images/phone.gif" alt="phone">
-                        </div>
-                        <!--This specifies where and how to send the form data; we are leaving it blank-->
-                        <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                            <label>Name:</label>
-                                <input type="text" placeholder="Please enter a name here">
-                            <label>Email:</label>
-                                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                            <label>Message:</label>
-                                <input type="text" id="Message" name="Message" placeholder="Any other input for me">
-                                <input type="submit" value="SUBMIT">
-                        </form>
-                    </div>
-                </div>
+        <div id="Contact">
+            <div class="fade-in-text">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            </div>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                     <h2>Contact</h2>
+                     <label for="name"><b class="whitet"></bclass>>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required>
+                     <label for="phone"><b class="whitet">Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b class="whitet">Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required>
+                     <label for="message"><b class="whitet">Message</b></label>
+                       <input type="text" placeholder="Any additonal questions" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
+            </div>
+         </div>
+                
                     
 
 
