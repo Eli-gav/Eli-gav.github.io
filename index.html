@@ -20,7 +20,6 @@
                         <a class="active" href="#home">Home</a>
                         <a href="#aboutme">About Me</a>
                         <a href="#github">GitHub</a>
-                        <a href="#contact">Contact</a>
                     </div>
             </div>
         </div>
@@ -38,7 +37,7 @@
                     <div>
                             <h2>Portfolio</h2>
                                 <h2>Software Development</h2>
-                                <p class="p-1">To build and to fix is my goal.</p>
+                                <p class="p-1">Software Developer Course from the Tech Academy.</p>
                                 <div class="test"></div>
                             </div>   
                             
@@ -63,11 +62,14 @@
                             <p>Please reach out or <a href="#contact">email me</a> if your interested in working with me.<br></p>
                         </div>
     
-                        <div>
+                        <div class="op">
                             <img class="code" src="./images/computer-code.gif" alt="">
+                            
+                                
+                            
                         </div>
                         <div class="popup" onclick="myFunction()">Course Details
-                            <span class="popuptext" id="myPopup">Graduate from the Tech Academy Full Stack Developer Course</span>
+                            <span class="popuptext" id="myPopup">Graduate with the skills of a entry-level technology professional that excels in the basics of their field and will have successful a career in the tech industry.</span>
                           </div>
                 </div>
         </div>
@@ -75,72 +77,45 @@
 
 
         <!---IMAGE LIGHTBOX-->
-
-    <div class="bl">
-
-        <div class="row">
-        <div class="column">
-            <img src="./images/computer_1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-            <img src="./images/computer-code.gif" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-            <img src="./images/github.gif" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-            <img src="./images/phone.gif" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-        </div>
-        </div>
-
-        <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img src="./images/computer_1.png" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            <img src="./images/computer-code.gif" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            <img src="./images/github.gif" style="width:25%">
-            </div>
+                    
+            <div class="row">
+                <div class="column">
+                <div class="card">
+                    <img src="./images/GitHub-Mark.png" alt="" style="width:50%">
+                    <div class="container">
+                    <h2>Github</h2>
+                    <p class="title"><a href="https://github.com/Eli-gav">My Github</a></p>
+                    <p>A collection of my projects using HTML, CSS, JS, and Python</p>
+                  
+                    </div>
+                </div>
+                </div>
             
-            <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            <img src="./images/phone.gif" style="width:25%">
+                <div class="column">
+                <div class="card">
+                    <img src="./images/gmail.png" alt="Mike" style="width:50%">
+                    <div class="container">
+                    <h2>Email</h2>
+                    <p class="title">ionsgav@gmail.com</p>
+                    <p>Please reach out and contact me if your interested.</p>
+                   
+                    </div>
+                </div>
+                </div>
+                
+                <div class="column">
+                <div class="card">
+                    <img src="images/tech.jpg" alt="John" style="width:50%">
+                    <div class="container">
+                    <h2>The Tech Academy</h2>
+                    <p class="title"><a href="https://www.learncodinganywhere.com/">The Tech Academy</a></p>
+                    <p>Offical Website of the Tech Academy</p>
+                    
+                    </div>
+                </div>
+                </div>
+                <img class="gittest" src="./images/move.gif" alt="">
             </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <div class="caption-container">
-            <p id="caption">Github</p>
-            </div>
-
-
-            <div class="column">
-            <img class="demo cursor" src="./images/computer_1.png" style="width:100%" onclick="currentSlide(1)" alt="">
-            </div>
-            <div class="column">
-            <img class="demo cursor" src="./images/computer-code.gif" style="width:100%" onclick="currentSlide(2)" alt="">
-            </div>
-            <div class="column">
-            <img class="demo cursor" src="./images/github.gif" style="width:100%" onclick="currentSlide(3)" alt="">
-            </div>
-            <div class="column">
-            <img class="demo cursor" src="./images/phone.gif" style="width:100%" onclick="currentSlide(4)" alt="">
-            </div>
-        </div>
-        </div>
-    </div>
-
         <!--END LIGHTBOX-->
 
                 
@@ -158,7 +133,7 @@
                                 
                             <img class="git" src="./images/github.gif" alt="github logo">
                             <div>
-                            <img class="gittest" src="./images/move.gif" alt="">
+                            
                             </div>
                     </div>
                 </div>
@@ -171,7 +146,7 @@
             <div class="form-popup" id="myForm">
                  <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
                      <h2>Contact</h2>
-                     <label for="name"><b class="whitet"></bclass>>Name</b></label>
+                     <label for="name"><b class="whitet"></bclass>Name</b></label>
                        <input type="text" placeholder="Type your name here" name="name" required>
                      <label for="phone"><b class="whitet">Phone</b></label>
                        <input type="text" placeholder="Type your phone number here" name="phone">
@@ -191,10 +166,10 @@
 
         <!--FOOTER-->
         <footer class="bottom">
-            <p> School I attended:</p>
-            <p><a href="https://www.learncodinganywhere.com">The Tech Academy</a></p>
-            <p>Personal email:</p>
-            <p>ionsgav@gmail.com</p>
+            <img src="./images/GitHub-Mark.png" alt="" class="avatar">
+            <img src="./images/gmail.png" alt="" class="avatar">
+            <img src="./images/tech.jpg" alt="" class="avatar">
+            
    
         </footer>
 
